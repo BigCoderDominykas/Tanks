@@ -8,11 +8,15 @@ public class Bullet : MonoBehaviour
     public GameObject particle;
     public int particleCount;
     public GameObject explosionMark;
+    public AudioClip shotSound;
+    public AudioClip explosionSound;
 
     AudioSource source;
 
     void Start()
     {
+        source = GetComponent<AudioSource>();
+        source.PlayOneShot(shotSound);
         Destroy(gameObject, 2f);
     }
 
@@ -25,6 +29,8 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Destructible")
         { 
+            //source.PlayOneShot(explosionSound);
+
             Destroy(collision.gameObject);
 
             var explosionPos = new Vector3(transform.position.x, 0.01f, transform.position.z);
@@ -33,7 +39,7 @@ public class Bullet : MonoBehaviour
             for (int i = 0; i < particleCount; i++)
             {
                 var offset = Random.insideUnitSphere;
-                print(offset);
+                particle.transform.localScale = new Vector3(Random.Range(0.01f, 1f), Random.Range(0.01f, 1f), Random.Range(0.01f, 1f));
                 Instantiate(particle, transform.position + offset, transform.rotation);
             }
         }
