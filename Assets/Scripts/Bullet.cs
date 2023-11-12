@@ -5,7 +5,6 @@ public class Bullet : MonoBehaviour
     public float speed = 20;
     public GameObject particle;
     public int particleCount;
-    public GameObject explosionMark;
     public AudioClip shotSound;
     public AudioClip explosionSound;
 
@@ -27,12 +26,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Destructible")
         {
-            //source.PlayOneShot(explosionSound);
-
             collision.gameObject.GetComponent<Health>().Damage();
-
-            var explosionPos = new Vector3(transform.position.x, 0.01f, transform.position.z);
-            Instantiate(explosionMark, explosionPos, transform.rotation);
 
             for (int i = 0; i < particleCount; i++)
             {

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3016032096373476349}
   - component: {fileID: 2525222226587381861}
   - component: {fileID: 1390142993472843096}
-  - component: {fileID: -2040182769027825447}
   - component: {fileID: -7720744801060428151}
+  - component: {fileID: -5358829962490259464}
   m_Layer: 0
   m_Name: Explosion Mark
   m_TagString: Untagged
@@ -85,7 +85,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!82 &-2040182769027825447
+--- !u!114 &-7720744801060428151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732046194772126667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297db6773e074774fbe4d1c8319550cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  fadeDelay: 8
+--- !u!82 &-5358829962490259464
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,17 +195,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-7720744801060428151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3732046194772126667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297db6773e074774fbe4d1c8319550cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 5
-  fadeDelay: 8
