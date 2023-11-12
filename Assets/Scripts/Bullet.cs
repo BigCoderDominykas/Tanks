@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -28,10 +26,10 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Destructible")
-        { 
+        {
             //source.PlayOneShot(explosionSound);
 
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Health>().Damage();
 
             var explosionPos = new Vector3(transform.position.x, 0.01f, transform.position.z);
             Instantiate(explosionMark, explosionPos, transform.rotation);

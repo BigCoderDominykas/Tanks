@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   particle: {fileID: 6097007720251235211, guid: 31550b4c3a00142448b686b0b06bae1b, type: 3}
-  particleCount: 20
+  particleCount: 3
   explosionMark: {fileID: 3732046194772126667, guid: 871ae761410a3594c9c0766316d4da71, type: 3}
   shotSound: {fileID: 8300000, guid: d8bf3b2dfb8b16340950b0f7e3cf66fc, type: 3}
   explosionSound: {fileID: 8300000, guid: 0f8a48359b1eb6843a847abd7eaf0b57, type: 3}

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3687826557348028912}
   - component: {fileID: 6298495110734015850}
   - component: {fileID: 8318415098986801482}
+  - component: {fileID: 8925851484673448518}
   m_Layer: 0
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,6 +103,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &8925851484673448518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179895598894249917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18036af4564bf0049a06d549d754d31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 5
+  autoDestroy: 0
 --- !u!1 &9070647397040774380
 GameObject:
   m_ObjectHideFlags: 0
